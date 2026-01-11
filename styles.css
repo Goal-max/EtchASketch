@@ -1,0 +1,11 @@
+* {
+ outline: 2px solid red;
+}
+
+#container {
+  display: flex;
+}
+#container div {
+  flex: 1;
+  height: 100px;
+}
