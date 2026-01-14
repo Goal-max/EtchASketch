@@ -1,4 +1,10 @@
+const button = document.createElement("button");
+button.textContent = "press me";
+let body = document.querySelector("body");
+
 const container = document.querySelector("#container");
+body.insertBefore(button, container);
+
 for (let i = 0; i < 256; i++) { 
   const div = document.createElement("div");
   div.addEventListener ("mouseenter", change); 
@@ -13,3 +19,6 @@ function restore (event) {
   let obj = event.target;
   setTimeout(() => {obj.style.backgroundColor = "white"}, 1000);
 }
+
+
+
