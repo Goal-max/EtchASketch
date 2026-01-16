@@ -4,7 +4,7 @@ button.addEventListener("click", ask);
 
 let body = document.querySelector("body");
 const container = document.querySelector("#container");
-//body.insertBefore(button, container);
+body.insertBefore(button, container);
 
 function ask () {
   let gridSize = prompt("Please enter a value for the grid size");

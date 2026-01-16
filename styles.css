@@ -4,16 +4,19 @@
 }
 
 body {
-  height: 100%;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #container {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
+  height: calc(100% - 50px);
+  width: 100%;
 }
 #container div {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   width: calc(100%/16);
-  height: calc(100vh/16);
+  height: calc(100%/16);
 }
