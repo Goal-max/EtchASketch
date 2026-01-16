@@ -6,8 +6,12 @@ let body = document.querySelector("body");
 body.appendChild(button);
 let container = "";
 
+//for test  
+ask();
+
 function ask () {
-  let gridSide = prompt("Please enter a value for the grid side");
+  //let gridSide = prompt("Please enter a value for the grid side");
+  let gridSide = 2; //for testing
   if (!(container === "")) { 
     container = document.querySelector("#container");
     body.removeChild(container);
