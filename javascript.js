@@ -3,20 +3,29 @@ button.textContent = "press me";
 button.addEventListener("click", ask);
 
 let body = document.querySelector("body");
-const container = document.querySelector("#container");
-body.insertBefore(button, container);
+body.appendChild(button);
+let container = "";
 
 function ask () {
-  let gridSize = prompt("Please enter a value for the grid size");
+  let gridSide = prompt("Please enter a value for the grid side");
+  if (!(container === "")) { 
+    container = document.querySelector("#container");
+    body.removeChild(container);
+  }
+  container = document.createElement("div");
+  container.setAttribute("id", "container");
+  body.appendChild(container);
+  create(gridSide);
 }
-
-for (let i = 0; i < 256; i++) { 
-  const div = document.createElement("div");
-  div.addEventListener ("mouseenter", change); 
-  div.addEventListener("mouseleave", restore);
-  container.appendChild(div);
-}
- 
+function create (gridSide) {
+  let grid = gridSide * gridSide;
+  for (let i = 0; i < grid; i++) { 
+    const div = document.createElement("div");
+    div.addEventListener ("mouseenter", change); 
+    div.addEventListener("mouseleave", restore);
+    container.appendChild(div);
+  }
+} 
 function change (event) {
   event.target.style.backgroundColor = "red";
 }
