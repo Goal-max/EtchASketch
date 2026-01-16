@@ -23,6 +23,8 @@ function create (gridSide) {
     const div = document.createElement("div");
     div.addEventListener ("mouseenter", change); 
     div.addEventListener("mouseleave", restore);
+    div.style.width = (100/gridSide) + "%";
+    div.style.height = (100/gridSide) + "%";
     container.appendChild(div);
   }
 } 
