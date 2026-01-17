@@ -44,8 +44,9 @@ function change (event) {
     console.log(rgba);
     let array = rgba.split(",");
     console.log(+array[3] + 0.1);
-    if (+array[4] < 1.0) {
-      console.log(array[4] += 0.1);
+    if (+array[3] < 1.0) {
+      array[3] = +array[3] + 0.1;
+      console.log(array[3]);
     }
 //receive colour value as string and split at comma
 //then change 4th opacity value 
