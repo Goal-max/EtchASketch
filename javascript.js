@@ -8,7 +8,10 @@ body.appendChild(button);
 let container = "";
 
 function ask () {
-  let gridSide = prompt("Please enter a value for the grid side");
+  let gridSide = 0;
+  while (gridSide > 100 || gridSide < 1) {
+    gridSide = prompt("Please enter a value for the grid side");
+  }
   if (!(container === "")) { 
     container = document.querySelector("#container");
     body.removeChild(container);
