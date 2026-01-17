@@ -7,8 +7,9 @@ let body = document.querySelector("body");
 body.appendChild(button);
 let container = "";
 
+ask ();
 function ask () {
-  let gridSide = 0;
+  let gridSide = 2;
   while (gridSide > 100 || gridSide < 1) {
     gridSide = prompt("Please enter a value for the grid side length between 1 and 100:");
   }
@@ -33,8 +34,19 @@ function create (gridSide) {
   }
 } 
 function change (event) {
-  if (event.target.style.backgroundColor === "") {
-    console.log('hi');
+  if (!(event.target.style.backgroundColor === "")) {
+    let colour = event.target.style.backgroundColor.toString();
+    console.log(colour);
+    let length = colour.length - 1;
+    console.log(length);
+    console.log(colour.slice(6, 7));
+    let rgba = (colour.slice(5, colour.length - 1));
+    console.log(rgba);
+    let array = rgba.split(",");
+    console.log(+array[3] + 0.1);
+    if (+array[4] < 1.0) {
+      console.log(array[4] += 0.1);
+    }
 //receive colour value as string and split at comma
 //then change 4th opacity value 
   } else {
