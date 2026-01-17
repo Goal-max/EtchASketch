@@ -26,14 +26,20 @@ function create (gridSide) {
   for (let i = 0; i < grid; i++) { 
     const div = document.createElement("div");
     div.addEventListener ("mouseenter", change); 
-    div.addEventListener("mouseleave", restore);
+    //div.addEventListener("mouseleave", restore);
     div.style.width = (100/gridSide) + "%";
     div.style.height = (100/gridSide) + "%";
     container.appendChild(div);
   }
 } 
 function change (event) {
-  event.target.style.backgroundColor = colour(); 
+  if (event.target.style.backgroundColor === "") {
+    console.log('hi');
+//receive colour value as string and split at comma
+//then change 4th opacity value 
+  } else {
+    event.target.style.backgroundColor = colour(); 
+  }
 }
 function restore (event) {
   let obj = event.target;
