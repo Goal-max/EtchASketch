@@ -40,4 +40,11 @@ function restore (event) {
   setTimeout(() => {obj.style.backgroundColor = "white"}, 1000);
 }
 
-
+function colour () {
+  function rand () {
+    return Math.floor(Math.random() * 256);
+  }
+  let r = rand();
+  let g;
+  let b;
+}
