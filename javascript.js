@@ -10,7 +10,7 @@ let container = "";
 function ask () {
   let gridSide = 0;
   while (gridSide > 100 || gridSide < 1) {
-    gridSide = prompt("Please enter a value for the grid side");
+    gridSide = prompt("Please enter a value for the grid side length between 1 and 100:");
   }
   if (!(container === "")) { 
     container = document.querySelector("#container");
