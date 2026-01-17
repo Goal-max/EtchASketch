@@ -33,7 +33,7 @@ function create (gridSide) {
   }
 } 
 function change (event) {
-  event.target.style.backgroundColor = "red";
+  event.target.style.backgroundColor = colour(); 
 }
 function restore (event) {
   let obj = event.target;
@@ -44,7 +44,5 @@ function colour () {
   function rand () {
     return Math.floor(Math.random() * 256);
   }
-  let r = rand();
-  let g;
-  let b;
+  return `rgb(${rand()}, ${rand()}, ${rand()})`;
 }
