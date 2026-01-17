@@ -1,6 +1,7 @@
 const button = document.createElement("button");
-button.textContent = "press me";
+button.textContent = "Set grid side length";
 button.addEventListener("click", ask);
+button.style.width = "fit-content";
 
 let body = document.querySelector("body");
 body.appendChild(button);
