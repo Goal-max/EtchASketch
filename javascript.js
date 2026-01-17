@@ -44,5 +44,5 @@ function colour () {
   function rand () {
     return Math.floor(Math.random() * 256);
   }
-  return `rgb(${rand()}, ${rand()}, ${rand()})`;
+  return `rgb(${rand()}, ${rand()}, ${rand()}, 0.1)`;
 }
