@@ -38,15 +38,13 @@ function change (event) {
     let colour = event.target.style.backgroundColor.toString();
     console.log(colour);
     let length = colour.length - 1;
-    console.log(length);
-    console.log(colour.slice(6, 7));
     let rgba = (colour.slice(5, colour.length - 1));
-    console.log(rgba);
     let array = rgba.split(",");
-    console.log(+array[3] + 0.1);
     if (+array[3] < 1.0) {
-      array[3] = +array[3] + 0.1;
-      console.log(array[3]);
+      array[3] = ` ${+array[3] + 0.1}`;
+      let newColour = `rgba(${array.join(",")})`;
+      event.target.style.backgroundColor = newColour; 
+      console.log(event.target.style.backgroundColor); 
     }
 //receive colour value as string and split at comma
 //then change 4th opacity value 
